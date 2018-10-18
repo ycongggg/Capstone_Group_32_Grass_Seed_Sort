@@ -1,0 +1,40 @@
+\documentclass[10pt, letterpaper, twoside, draftclsnofoot, onecolumn. notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\rmfamily
+
+\title{Computer Vision Grass Seed Sorter}
+\author{Kevin Deming
+CS 461 Fall Term}
+%Senior Design Fall Term
+
+
+\begin{document}
+	
+	\begin{titlepage}
+		\maketitle
+		\begin{abstract}
+			\textit{Abstract} - The purpose of the grass seed sorting project is to improve seed selecting by using a machine instead of a human. The problem is then identified in the current method of sorting seeds and its inaccuracy. The impacts of our machine on agriculture and seed research are discussed along with the improvement to the seed analyst's job. The challenge of separating small grass seeds from good and bad is a large challenge and is the reason it has not been done before. In order to accomplish the increase purity and speed goals the project uses modern computer vision software with quick analytic hardware. Not only does this project offer a opportunity to improve seed research, but also create possibilities in other fields where computer vision can revolutionize modern methods and tasks.
+		\end{abstract}
+	\end{titlepage}
+\section{The Problem}
+\quad Sorting seeds into groups of like seeds is not difficult to do by hand when working with only a few seeds, however sorting over a thousand seeds into different groups by hand can suddenly become a daunting task. Currently at Oregon State University seed analysts have to observe 10 samples of 2,500 grass seeds each and pick out the bad seeds by hand. This is a slow process and many bad seeds are missed due to human error. On top of being slow and inaccurate, the process is also strenuous to the people who sort the seeds. It can cause headaches, back problems and is extremely boring.
+
+There are machines that can sort out larger seeds like wheat oats and rice, however smaller seeds, like grass seeds, are small so machines have a hard time detecting incorrect seeds and sorting them. Since this poses quite a challenge no machine has be created to deal with smaller grass seeds, and so the human workers are forced to spend their time sorting seeds instead of testing them. Hand selecting makes seed tests much slower than they need to be and keeps the purity of seeds at a lower percentage than is ideal.
+
+
+\section{Why does it matter?}
+\quad Since there are no current machines that pick out bad grass seeds, the method requires a worker to spend hours picking apart seeds by hand, which leads to some mistakes in picking seeds. If we are successful in creating a machine capable of detecting bad seeds and sorting them, it will allow for each sample to be done in a much faster time and with much more accuracy. This not only saves the seed analysts lots of time and hard work, but it also would change the seed testing industry. 
+
+Testing seeds is already a difficult and slow task and when there is a margin of error, its harder to know if your test results are actually accurate. If this inaccuracy is reduced however, there would be a much higher confidence in the results found by seed labs. Not only does this improve the ability for labs to test seeds and get good data, but it also assist farmers and seed producing industries in their methods and production. In the state of Oregon, where agriculture is a large industry, improvements to seed research and methods would be extremely impactful to the entire state and its economy. 
+
+\section{The Plan}
+\quad In order to tackle the difficult task of selecting and sorting seeds we need to use tools capable of getting high quality images, and quickly determining if a seed is bad. The tools we are planning on using in order to accomplish our task is a high resolution camera, LED light, and vibratory conveyor belt. In accordance with the hardware we want to use computer vision software in order to have the camera detect bad seeds on the conveyor belt. We will be setting up the system that detects the seeds and sends an electric signal to a robotic arm/ sorter.
+
+Since this hasn't been done before, there are going to be many challenges that we will have to face. The first challenge is to find a way to use computer vision to determine if a seed is good or bad. This is a challenge because the computer deciding has to make a decision very quickly and act upon it before the seed passes. Second is figuring out the best way to setup the system so that the computer has enough time to calculate and act appropriately. 
+
+\section{The Goal}
+\quad We want the machine for sorting seeds to be as accurate as possible, and much faster than the current method of hand picking. In order to accomplish this goal the machine should be able to separate grass seeds and end up with a 99.5\% purity(Only 0.5\% of seeds are bad) with a 10\% false negative(10\% is an off-seed). It should also be able to complete a sample of 2,500 grass seeds in under 30 minutes. If these criteria are met, then the machine created will be considered a success. Our hope is to surpass these goals, however our primary goal with this project is to setup the method and system of this machine.
+
+	
+\end{document}
