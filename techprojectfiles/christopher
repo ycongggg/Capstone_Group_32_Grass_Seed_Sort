@@ -1,0 +1,39 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+
+
+\title{Problem Statement}
+\author{Christopher Wohlwend - CS 461 - Fall term }
+\date{October 11, 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle 
+\begin{abstract}
+Grass seed analysts currently sort through grass seed samples by hand in order to create pure grass seed samples. This process is incredibly tedious and has a lot of potential to be made more efficient. Our goal is to create a system capable of identifying impure samples in a way that is both accurate and more efficient then the current manual method used today. This will vastly reduce the stress and workload imposed upon seed analysts, and likely speed up the sorting process. More efficient systems have already been implemented for grains with a large market share. Grass seed has yet to have had this implemented due to its smaller market, but doing so will still have enormous benefits.
+
+\end{abstract}
+\clearpage
+
+\section{Definition and Description}
+There is a need to identify off-type seed in given seed samples. This is currently done by seed analysts manually removing off-type seed by hand from given samples.  Seed analysts currently deal with seed samples as large as 2500 grass seed, and frequently run through 10 of these samples each day. This takes a significant toll on each seed analyst as the work is often tediously mind-numbing. If we can sort the majority of the seed in an automated fashion, the job seed analysts are required to complete will become more efficient, and potentially more accurate. This will both increase the quality of future seed samples, and save the time and money by reducing the analysts total workload. Our goal is to focus on identifying off type seed so that another team will be able to actually remove the impure seed before it reaches the seed analysts, acting as a "pre-screener" designed to be as efficient as possible for the seed analysts. Solutions to this problem have already been solved for seeds with large markets such as oats and other cereals. Grass seed has been neglected thus far. Our goal is simply to identify impurities and generate a signal so that another development group is capable of doing the actual sorting.
+ 
+\section{Proposed Solution}
+ The proposed solution involves running the unsorted seed down a vibratory conveyor belt and underneath a high-resolution camera. A software solution will then take those images and identify off type seed. The software will likely make use of neural networks trained to identify the presence of undesired seed or plant material. Convolutional Neural Networks will likely be effective. After collecting enough sample images, we can supply those samples to the network so it can learn to identify those images with undesired plant material. This signal can then be used by another team to sort off the undesired material. Our code then must receive an image from the high-resolution camera in an efficient way and fast enough so as to not miss any undesired seed and plant material. It must then pass that image data into the Convolutional Neural Network we have trained. This will likely need to be done on a GPU in order to complete the task fast enough to produce a signal that can be used to sort off the undesired material before it makes it to the end. Finally receive the result and send the result as a signal compatible with another group, for our purposes, turning an LED light on or off. Then in order to make it use-able, a simple user interface will likely be necessary in order to turn the entire system on and off, even if this interface is a simple command line one.
+ 
+\section{Performance Metrics}
+Our goals include creating a working system capable of signaling undesired seed and plant materials. This system will have two major statistics that we will need to look at to determine success, purity, and false positive percentage. Additionally we should look at how usable the system is.
+\subsection{Purity}
+Purity is the measure of how pure the sorted end product is. Our goal is that seed samples should 99.5\% pure after sorting. This is a pretty low margin for error, and is likely the most important metric. If we fail to reach 99.5\% pure, how close we get will likely be our measure of success.
+\subsection{False Positives}
+The false positive percentage is the amount of pure seed that gets classified as impure by our system. Less then 10\% of pure seed should be allowed to be classified as impure. This allows us to cast a reasonably wide net when looking for impurities, although obviously the fewer false positives the better. While not as important as purity, if this percentage creeps too high, the system will not be practical to use.
+\subsection{Usability}
+Usability is important for any practical solution.This system should be able to be used by a seed analyst with sufficient training to use the system. The more intuitive our system is the better, but our focus is functionality first. Our primary metric of success is minimizing the amount of pure seed disposed, and maximizing the purity of the output. Once these levels have been reached, ensuring an easy to use system will be the priority.
+
+\section{Conclusion}
+In order to make the process of sorting out impurities from grass seed more efficient, and more accurate, we plan to use a camera and software designed to use a neural net to identify the presence of impurities and signal the need to remove them. This should save seed analysts vast amounts of time, and make the seed sorting process both more accurate, and more efficient.
+
+\end{document}
