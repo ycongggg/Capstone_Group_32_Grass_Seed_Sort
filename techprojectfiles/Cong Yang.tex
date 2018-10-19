@@ -1,0 +1,44 @@
+\documentclass[letter,draftclsnoffot, onecolumn]{IEEEtran}
+\usepackage[singlespacing]{setspace}
+\usepackage[margin=0.75in]{geometry}
+
+\title{Problem Statement of Computer Version Grass Seed Sorter }
+\author{Cong Yang }
+\usepackage{natbib}
+\usepackage{graphicx}
+\IEEEspecialpapernotice{CS 461 Fall 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Abstract}
+\documentclass[letter,draftclsnoffot, onecolumn]{IEEEtran}
+\usepackage[singlespacing]{setspace}
+\usepackage[margin=0.75in]{geometry}
+
+\title{Problem Statement of Computer Version Grass Seed Sorter }
+\author{Cong Yang }
+\usepackage{natbib}
+\usepackage{graphicx}
+\IEEEspecialpapernotice{CS 461 Fall 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Abstract}
+Our team is assigned to a project called Computer Vision System of Grass Seed Sorter. The goal of the project is to create a computer device to separate off-type seeds from pure seed, and the technology will be used to view thousands of seeds/hr.  The basic process of how the machine works is that the seeds will be presented under the high resolution-camera while traveling down a vibratory conveyor. A LED light will indicate when an off-type seed or plant material has been spotted. Our main job is to use the latest equipment available to develop a computer vision system that will enhance the work performed by seed analysts by pre-screening the seed samples. Our final goal is to correctly classify 2500 seeds in 30 minutes. The purity of the target seed component must be 99.5 percentage, but a false negative rate of up to 10 percentages is acceptable. The entire project has to be fully transferable to the client.
+\pagebreak
+
+\section{}
+ Since we are using a high resolution camera to detect the weeds, we need to find a way to let the camera “know” the existence of each of weed. We need to count the  of total weeds, good weeds, and bad weeds. We need to make it available to pause and restart at any time, since something unexpected may happen during the discrimination is going on. For example, when the discriminating machine is working, something with a big volume is noticed, which may not be able to go through, or will disrupt the discrimination, we need to pause the project by command, remove the foreign matter, and let the project restart.
+   To let the each of weed can be recognized, we may use a model for weeds, which can be something like a little ball. Counting is like something extended from the recognizing. Whenever a seed is recognize, total count will be increased by 1, and if it is a good weed, amount of good seed will be increased by 1; otherwise, the amount of other seeds will be increased by 1. To avoid wrong data is recorded, it is good to add a criteria that, every time when total amount is increased by 1, only one of the other amount can be increased by one, so that we can ensure that when we add up the amount of good seed and other seeds, it is equal to the total amount. It is not that difficult to achieve the ability to pause or restart at any time. We just need to let our project be able to receive a command of action, and then give us back the corresponding response.
+   To check how far we are away from competence, it is good to set up some milestone for us to go. At the very beginning, we may want to let our project be able to recognize the existence of the seeds . Then we may finish the control system early, since it will be affected by our future work. After that, we can continue to create a model of seed, so that the project can recognize the existence of each of the seeds when the seeds is going through. Then we should set up the criteria of pure seeds and all other weed seed, crop seed, and other plant material. Next, counting system should be developed. 
+   Now that this may be the early draft of problem statement for our project, and many more problems will occur soon. Since our group didn’t meet with client and sponsor yet, we should find much more way to improve our proposal when we finish the meeting.
+
+\par
+\pagebreak
+
+
+\end{document}
